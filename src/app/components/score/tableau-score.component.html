@@ -1,0 +1,15 @@
+<div class="score-board">
+  <div class="case" *ngFor="let score of scores">
+    <div class="top-row">
+      <div>{{ score.lancerUn === 10 ? "X" : score.lancerUn }}</div>
+      <div *ngIf="score.lancerDeux">
+        {{ score.lancerDeux + score.lancerUn === 10 ? "/" : score.lancerDeux }}
+      </div>
+      <div *ngIf="score.lancerTrois">{{ score.lancerTrois }}</div>
+    </div>
+    <span class="sum-score">{{ score.total }}</span>
+  </div>
+</div>
+<p>
+  Score total : <span>{{ scoreTotal }}</span>
+</p>
